@@ -8,7 +8,7 @@ import scala.language.postfixOps
 object downloader {
 
   def goo() = {
-    new URL("http://google.com") #> new File("D://projects/Output.html") !!
+    new URL("http://portal.amfiindia.com/DownloadNAVHistoryReport_Po.aspx?mf=55&tp=1&frmdt=01-Jul-2020&todt=23-Jul-2020") #> new File("D://projects/Output.txt") !!
   }
 
 }
