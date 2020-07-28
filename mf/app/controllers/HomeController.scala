@@ -3,7 +3,7 @@ package controllers
 import javax.inject._
 import play.api._
 import play.api.mvc._
-import core.downloader
+import core.mf_data_downloader
 
 /**
  * This controller creates an `Action` to handle HTTP requests to the
@@ -20,7 +20,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
    * a path of `/`.
    */
   def index() = Action { implicit request: Request[AnyContent] =>
-    downloader.goo()
+    mf_data_downloader.goo()
     Ok(views.html.index())
   }
 }
