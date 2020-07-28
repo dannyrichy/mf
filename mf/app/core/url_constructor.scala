@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 
 class url_constructor(mf_number: Int, mf_type: Int = 1) {
-  val common_string: String = "http://portal.amfiindia.com/DownloadNAVHistoryReport_Po.aspx?"
+  protected val common_string: String = "http://portal.amfiindia.com/DownloadNAVHistoryReport_Po.aspx?"
 
   val url: String = common_string
     .concat("mf=%s&".format(mf_number.toString))
@@ -20,7 +20,7 @@ class url_constructor(mf_number: Int, mf_type: Int = 1) {
     case d: Date => new SimpleDateFormat("dd-MMM-yyyy").format(d)
     case s: String => {
       new SimpleDateFormat("dd-MMM-yyyy").format(
-        new SimpleDateFormat("dd-mm-yyyy").parse(s)
+        new SimpleDateFormat("dd-MM-yyyy").parse(s)
       )
     }
   }
